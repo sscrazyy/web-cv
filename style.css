@@ -1,0 +1,38 @@
+html {
+    font-family: serif;
+    font-size: 1.2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+h1 {
+    margin-bottom: 0em;
+}
+
+.tight {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+h2 {
+    background-color: #eeeeee;
+    border: 1px solid black;
+    border-radius: 0.1em;
+    padding-left: 10px;
+/*#bfbfbf kulso keret valahogy*/
+}
+
+ul {
+    margin-top: 1em;
+    margin-bottom: 0.9em;
+}
+
+ul li {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.vonalka { 
+    list-style: none;
+}
+
