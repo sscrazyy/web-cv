@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>HTML5 Logo</title>
+
+    <style>
+        footer {
+            display: block;
+        }
+
+        article {
+            display: block;
+        }
+    </style>
+
+    <script language='JavaScript'>
+        var ctx;
+        var factorvalue = 1;
+
+        function init() {
+            var c = document.getElementById('canvas');
+            ctx = c.getContext('2d');
+
+            console.log("HERE");
+            ctx.font = "30px Verdana";
+            var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+            gradient.addColorStop("0", " magenta");
+            gradient.addColorStop("0.5", "blue");
+            gradient.addColorStop("1.0", "red");
+            ctx.fillStyle = gradient;
+            ctx.save();
+
+            redraw();
+        }
+
+        function redraw() {
+            var offsety = 80;
+            ctx.restore();
+            ctx.save();
+
+            ctx.clearRect(0, 0, 600, 400);
+            ctx.scale(factorvalue, factorvalue);
+
+            ctx.fillText("OOPS IT WORKS", 31, 60);
+        }
+
+        function changescale(val) {
+            factorvalue = val / 100;
+            redraw();
+        }
+    </script>
+</head>
+
+<body onload="init();">
+
+    <canvas id="canvas" width="600" height="400">
+        Fuck you
+    </canvas>
+
+    <article>
+        Scale percentage: <input id="slide" type="range" min="0" max="100" onchange="changescale(this.value)" step="10">
+    </article>
+</body>
+
+</html>
