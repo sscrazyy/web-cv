@@ -10,6 +10,26 @@ body {
     margin: 0;
 }
 
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row::after { 
+    display: table;
+    clear: both;
+    content: "";
+}
+
 /* #### Nav bar #### */
 
 nav {
@@ -50,6 +70,12 @@ ul.topnav li a:hover {
 
 ul.topnav li.dropdownIcon { 
     display: none;
+}
+
+/* #### Custom styles #### */
+
+#section-1-gradient { 
+    background: linear-gradient(#076DFF, #65a5ff);
 }
 
 /* #### Mobile #### */
