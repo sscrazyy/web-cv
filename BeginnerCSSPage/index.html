@@ -4,7 +4,8 @@
 <head>
     <title>My CSS Website</title>
     <link rel="stylesheet" href="style.css">
-</head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
     <nav>
@@ -16,35 +17,49 @@
             <li class="topnav-right"><a href="#signup">Sign Up</a></li>
             <li class="topnav-right"><a href="#signin">Sign In</a></li>
             <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
-        </ul> 
+        </ul>
     </nav>
 
-    <div class="container" id="section-1-gradient"> 
-       <div class="row"> 
-           <div class="col-6">
-           
-           </div>
-       </div> 
+    <div class="container" id="section-1-gradient">
+        <div class="row">
+            <div class="col-6">
+                <div class="leftSide-col">
+                    <h1 class="large">Crazy stuff</h1>
+                    <h1 class="large">Made for fun</h1>
+                </div>
+                <form>
+                    <div class="leftSide-col">
+                        <h2>Username</h2>
+                        <input class="inputbox" type="text" placeholder="Username">
+                        <h2>Password</h2>
+                        <input class="inputbox" type="text" placeholder="Username">
+                    </div>
+                </form>
+            </div>
+            <div class="col-6">
+                <div class="rightSide-col">
+                    <div class="videoContainer">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/G_C8upZEJXo" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+                    picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
-
-
-
-
     <script>
-    function dropdownMenu() {
-        var x = document.getElementById("dropdownClick");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-            // change topna to topnav.responsive
+        function dropdownMenu() {
+            var x = document.getElementById("dropdownClick");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                // change topna to topnav.responsive
+            } else {
+                x.className = "topnav";
+            }
         }
-        else {
-            x.className = "topnav";
-        }
-    }
-
     </script>
 
 </body>
