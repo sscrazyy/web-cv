@@ -8,9 +8,20 @@ export class Button extends BaseElement {
   }
 
   getElementString() {
-    return `<!-- Accent-colored raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    return `<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 ${this.title}
 </button>`;
+  }
+
+  componentMount() {
+    console.log("Button mounted");
+  }
+
+  componentUpdate(text) {
+    console.log(`Update with ${text}`);
+  }
+
+  componentUnMount() {
+    console.log("Button unmounted");
   }
 }

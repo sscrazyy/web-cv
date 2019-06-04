@@ -8,3 +8,10 @@ import { Button } from "./ui/button.js";
 
 const b = new Button("Click me");
 b.appendToElement($("body"));
+
+setTimeout(function() {
+  b.updateElement("Szex van");
+}, 5000);
+setTimeout(function() {
+  b.removeElement();
+}, 10000);

@@ -12,6 +12,8 @@ export class BaseElement {
     this.createElement();
     el.append(this.element);
     this.enableJS();
+
+    this.componentMount();
   }
 
   createElement() {
@@ -19,11 +21,35 @@ export class BaseElement {
     this.element = $(s);
   }
 
+  removeElement() {
+    this.element.remove();
+
+    this.componentUnMount();
+  }
+
+  updateElement(text) {
+    this.element.text(text);
+
+    this.componentUpdate(text);
+  }
+
   getElementString() {
     throw "Please ovverride getELementString() in BaseElement";
   }
 
   enableJS() {
-    // componentHandler.upgradeElement(this.element[0]);
+    componentHandler.upgradeElement(this.element[0]);
+  }
+
+  componentMount() {
+    throw "override";
+  }
+
+  componentUnMount() {
+    throw "override UnMount";
+  }
+
+  componentUpdate(text) {
+    throw "override Update";
   }
 }
